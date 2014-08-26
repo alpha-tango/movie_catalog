@@ -1,0 +1,12 @@
+<h2><%=@movie_page[0]["movie"] %></h2>
+
+<h3>Year Released: <%=@movie_page[0]["year"]%></h3>
+<h3>Rating: <%=@movie_page[0]["rating"]%></h3>
+<h3>Genre: <%=@movie_page[0]["genre"]%></h3>
+<h3>Production Studio: <%=@movie_page[0]["studio"]%></h3>
+<h3>Actors:</h3>
+  <ul>
+    <% @movie_page.each do |movie| %>
+    <li><a href="/actors/<%=movie["actor"]%>"><%=movie["actor"]%></a> as <%=movie["character"]%></li>
+    <% end %>
+  </ul>
